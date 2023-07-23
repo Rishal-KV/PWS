@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
 @font-face {
   font-family: signature;
-  src: url("/assets/font/Photograph\ Signature.ttf") 
+  src: url("../font/Photograph-Signature.ttf") 
 
 }
 /*===== VARIABLES CSS =====*/
@@ -168,6 +168,7 @@ img {
 
 .nav__logo {
   color: var(--second-color);
+  font-family: signature;
   font-size: xx-large;
 }
 
