@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <link rel="stylesheet" href="assets/css/styles.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
         <!-- =====BOX ICONS===== -->
         <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
@@ -175,11 +176,11 @@
                 <h2 class="section-title">Contact</h2>
 
                 <div class="contact__container bd-grid">
-                    <form method="POST" action="https://script.google.com/macros/s/AKfycbwmevS130-NFPC-H6Ako3qyXV7xKt0zbealVYzD1QOZw31LkFBDlyUuW3yGnUGiWPdwKg/exec" class="contact__form" id="contact gform">
+                    <form  action="" class="contact__form" id="submit-form">
                         <input type="text" placeholder="Name" name="name" class="contact__input">
                         <input type="mail" placeholder="Email" name="email" class="contact__input">
                         <textarea  placeholder="Message"    name="message"  cols="0" rows="10" class="contact__input"></textarea>
-                        <input type="submit" value="SUBMIT" class="contact__button button">
+                        <input type="submit" value="submit" class="contact__button button">
                     </form>
                 </div>
             </section>
@@ -200,5 +201,23 @@
 
         <!--===== MAIN JS =====-->
         <script src="assets/js/main.js"></script>
+        <script>
+            $("#submit-form").submit((e)=>{
+                e.preventDefault()
+                $.ajax({
+                    url:"https://script.google.com/macros/s/AKfycbwmevS130-NFPC-H6Ako3qyXV7xKt0zbealVYzD1QOZw31LkFBDlyUuW3yGnUGiWPdwKg/exec",
+                    data:$("#submit-form").serialize(),
+                    method:"post",
+                    success:function (response){
+                        alert("Form submitted successfully")
+                        window.location.reload()
+                    },
+                    error:function (err){
+                        alert("Something Error")
+        
+                    }
+                })
+            })
+        </script>
     </body>
 </html>
