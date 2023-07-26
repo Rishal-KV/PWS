@@ -168,7 +168,7 @@ img {
 
 .nav__logo {
   color: var(--second-color);
-  font-family: signature;
+  font-family: var(--body-font);
   font-size: xx-large;
 }
 
@@ -283,6 +283,8 @@ img {
 .skills__container {
   row-gap: 2rem;
   text-align: center;
+  display: flex;
+  align-items: center;
 }
 
 .skills__subtitle {
