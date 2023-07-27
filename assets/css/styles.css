@@ -54,7 +54,7 @@ body {
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
   color: var(--second-color);
-  overflow-y: hidden;
+  overflow-x: hidden;
 }
 
 h1, h2, p {
