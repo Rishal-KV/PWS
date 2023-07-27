@@ -54,6 +54,9 @@ body {
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
   color: var(--second-color);
+
+}
+html, body{
   overflow-x: hidden;
 }
 
